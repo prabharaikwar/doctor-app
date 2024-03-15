@@ -1,0 +1,18 @@
+.footer-container{
+    background:  #33ccff;
+    color: black;
+}
+.footer-btn{
+    background: #F76DD0;
+    color: white;
+    font-size: small;
+}
+.text-facebook{
+color: rgb(59,87,157);
+}
+.text-insta{
+color: rgb(220,2,146);
+}
+.text-twitter{
+    color: rgb(29,161,242);
+}
