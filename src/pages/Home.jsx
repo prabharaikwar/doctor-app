@@ -13,12 +13,22 @@ const Home = () => {
     <div className="mx-auto">
       <DoctorNavbar />
       <Container>
-        <AppointmentDetails />
-        <AppointmentBooking />
+<<<<<<< Updated upstream
+        <Element id="booking">
+=======
+        <Element id="scroll-to-booking">
+>>>>>>> Stashed changes
+          <AppointmentDetails />
+        </Element>
+        <Element id="aboutus">
+          <AppointmentBooking />
+        </Element>
         <Element id="service">
           <Service />
         </Element>
-        <FeedbackReview />
+        <Element id="knowmore">
+          <FeedbackReview />
+        </Element>
       </Container>
       <Footer />
     </div>

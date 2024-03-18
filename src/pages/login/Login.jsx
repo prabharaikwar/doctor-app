@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import "./Login.css"; 
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
+import { HOME } from "../../helper/PageRoute";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form submitted with data:", formData);   
+    console.log("Form submitted with data:", formData);
   };
 
   const handleInputChange = (event) => {
@@ -31,9 +32,13 @@ const LoginPage = () => {
           <Card className="login-user">
             <Card.Header>
               <Row>
-              <Link to="/" className="text-light mx-2">
-                      Home
-                    </Link>
+<<<<<<< Updated upstream
+                <Link to={HOME} className="text-light mx-2">
+=======
+                <Link to="/" className="text-light mx-2">
+>>>>>>> Stashed changes
+                  Home
+                </Link>
               </Row>
             </Card.Header>
             <Card.Body>
@@ -45,6 +50,7 @@ const LoginPage = () => {
                     type="email"
                     placeholder="Enter email"
                     name="email"
+                    autoComplete="username"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -56,6 +62,7 @@ const LoginPage = () => {
                     type="password"
                     placeholder="Password"
                     name="password"
+                    autoComplete="current-password"
                     value={formData.password}
                     onChange={handleInputChange}
                     required

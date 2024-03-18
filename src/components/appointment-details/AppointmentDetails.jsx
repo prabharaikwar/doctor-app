@@ -13,7 +13,7 @@ const AppointmentDetails = () => {
             fast
           </h1>
           <h3 className="mt-2">Appointment Details</h3>
-          <Form action="#home">
+          <Form action="#home" inline={"true"}>
             <Form.Group className="mb-3" controlId="formGroupEmail">
               <Form.Label className="font-weight-bold">Patient Name</Form.Label>
               <Form.Control type="text" placeholder="Enter patient Name" />

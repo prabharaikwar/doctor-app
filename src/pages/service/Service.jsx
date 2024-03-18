@@ -6,6 +6,7 @@ import ServiceImg from "../../image/service-img.jpg";
 import { FaTooth } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa6";
 import { FaHeadSideVirus } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const Service = () => {
   const data = [
@@ -48,16 +49,16 @@ const Service = () => {
               <li className="mb-2">Apply coupon for treatment</li>
             </ul>
           </div>
-          {/* <div className="d-flex justify-content-center mt-2"> */}
           <Button
             variant="light"
             size="lg"
             type="submit"
             className="book-appoientment-btn p-3"
           >
-            Book Appoientment
+            <Link to="booking" smooth={true} duration={500}>
+              Book Appointment
+            </Link>
           </Button>
-          {/* </div> */}
         </Col>
       </Row>
       <Row className="mb-2">
@@ -65,7 +66,9 @@ const Service = () => {
           <h1>Various Specialist are here you to take care of your Health</h1>
           <p>Doctor are availible at any time to care your health</p>
           <Button variant="light" className="border border-dark p-2">
-            Know more
+            <Link to="knowmore" smooth={true} duration={500}>
+              Know more
+            </Link>
           </Button>
         </Col>
       </Row>
