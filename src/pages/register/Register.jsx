@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
+import {HOME} from "../../helper/PageRoute";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ const RegisterPage = () => {
           <Card className="register-user">
             <Card.Header>
               <Row>
-                <Link to="/" className="text-light mx-2">
+                <Link to={HOME} className="text-light mx-2">
                   Home
                 </Link>
               </Row>
@@ -58,6 +59,7 @@ const RegisterPage = () => {
                     type="email"
                     placeholder="Enter email"
                     name="email"
+                    autoComplete="username"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -69,6 +71,7 @@ const RegisterPage = () => {
                     type="password"
                     placeholder="Password"
                     name="password"
+                    autoComplete="current-password"
                     value={formData.password}
                     onChange={handleInputChange}
                     required

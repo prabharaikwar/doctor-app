@@ -3,9 +3,11 @@ import "./Footer.css";
 import { Form, Col, Row, Container, InputGroup, Button } from "react-bootstrap";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { Link as LinkAs } from "react-router-dom";
+import { SIGNUP } from "../../helper/PageRoute";
 
 const Footer = () => {
   return (
@@ -34,7 +36,8 @@ const Footer = () => {
         </Row>
         <Row className="d-flex justify-content-around">
           <Col>
-            <ul className="list-unstyled">
+<<<<<<< Updated upstream
+            <ul className="list-unstyled">              
               <li className="mb-2 font-weight-bold">About</li>             
               <Link
                   to="service"
@@ -43,13 +46,31 @@ const Footer = () => {
                 >
                      <li className="mb-2">Service</li>
                 </Link>
+=======
+            <ul className="list-unstyled">
+              <li className="mb-2 font-weight-bold">About</li>
+              <Link to="service" smooth={true} duration={500}>
+                <li className="mb-2">Service</li>
+              </Link>
+>>>>>>> Stashed changes
               <li className="mb-2">Beg</li>
             </ul>
           </Col>
           <Col>
             <ul className="list-unstyled">
               <li className="mb-2 font-weight-bold">Information</li>
-              <li className="mb-2">Sign Up</li>
+<<<<<<< Updated upstream
+              <li className="mb-2"><LinkAs to={SIGNUP} className="text-signup text-dark">Sign Up</LinkAs></li>
+=======
+              <li className="mb-2">
+                <LinkAs
+                  to={SIGNUP}
+                  className="text-dark mb-2 li-text-none"
+                >
+                  Sign Up
+                </LinkAs>
+              </li>
+>>>>>>> Stashed changes
               <li className="mb-2">Join Community</li>
               <li className="mb-2">Terms</li>
             </ul>
@@ -82,7 +103,10 @@ const Footer = () => {
               <FaInstagramSquare size={25} className="text-insta mx-1" />
             </div>
             <div>
-              <FaTwitter size={25} className="text-twitter" />
+              <FaTwitter size={25} className="text-twitter mx-1" />
+            </div>
+            <div>
+              <FaLinkedinIn size={25} className="text-linkdin"/>
             </div>
           </Col>
         </Row>

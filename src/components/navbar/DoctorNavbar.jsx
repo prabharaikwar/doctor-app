@@ -9,8 +9,15 @@ import {
   Nav,
   Button,
 } from "react-bootstrap";
+<<<<<<< Updated upstream
 import { Link } from "react-scroll";
 import { Link as LinkAs } from "react-router-dom";
+import { HOME, LOGIN, SIGNUP } from "../../helper/PageRoute";
+=======
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
+import { LOGIN, SIGNUP } from "../../helper/PageRoute";
+>>>>>>> Stashed changes
 
 const DoctorNavbar = () => {
   return (
@@ -21,10 +28,15 @@ const DoctorNavbar = () => {
         variant="light"
       >
         <Container>
+<<<<<<< Updated upstream
+          <Navbar.Brand className="font-weight-bold">Doctor +</Navbar.Brand>
+          <Form inline>
+=======
           <Navbar.Brand href="#home" className="font-weight-bold">
             Doctor +
           </Navbar.Brand>
-          <Form inline>
+          <Form inline={"true"}>
+>>>>>>> Stashed changes
             <Row>
               <Col xs="auto">
                 <Form.Control
@@ -40,43 +52,64 @@ const DoctorNavbar = () => {
             id="basic-navbar-nav"
             className=" justify-content-center"
           >
+<<<<<<< Updated upstream
+            <Nav className="me-auto">
+              <Nav.Link as={LinkAs} to={HOME} className="navItem">
+                Home
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="service"
+=======
             <Nav className="me-auto ">
-              <Nav.Link>
-                <LinkAs to="/" className="navItem">
-                  Home
-                </LinkAs>
+              <Nav.Link className="navItem">Home</Nav.Link>
+              <Nav.Link
+                as={ScrollLink}
+                to="service"
+                smooth={true}
+                duration={500}
+                className="navItem"
+              >
+                Service
               </Nav.Link>
-              <Nav.Link>
-                <Link
-                  to="service"
-                  smooth={true}
-                  duration={500}
-                  className="navItem"
-                >
-                  Service
-                </Link>
+              <Nav.Link
+                as={ScrollLink}
+                to="aboutus"
+>>>>>>> Stashed changes
+                smooth={true}
+                duration={500}
+                className="navItem"
+              >
+<<<<<<< Updated upstream
+                Service
               </Nav.Link>
-              <Nav.Link href="#home">
-                <Link
-                  to="aboutus"
-                  smooth={true}
-                  duration={500}
-                  className="navItem"
-                >
-                  About Us
-                </Link>
+              <Nav.Link
+                as={Link}
+                to="aboutus"
+                smooth={true}
+                duration={500}
+                className="navItem"
+              >
+                About Us
               </Nav.Link>
-              <Nav.Link>
-                <LinkAs to="/register" className="navItem">
-                  Register
-                </LinkAs>
+              <Nav.Link as={LinkAs} to={SIGNUP} className="navItem">
+=======
+                About Us
+              </Nav.Link>
+              <Nav.Link as={RouterLink} to={SIGNUP} className="navItem">
+>>>>>>> Stashed changes
+                Register
               </Nav.Link>
             </Nav>
             <Nav>
               <Button variant="light">
-                <LinkAs to="/login" className="btn-navitem btn">
+<<<<<<< Updated upstream
+                <LinkAs to={LOGIN} className="btn-navitem btn">
+=======
+                <RouterLink to={LOGIN} className="btn-navitem btn">
+>>>>>>> Stashed changes
                   Login
-                </LinkAs>
+                </RouterLink>
               </Button>
             </Nav>
           </Navbar.Collapse>
